@@ -30,7 +30,7 @@ export default function Skills() {
     <section className="skills | bg-primary-200 text-primary-400 padding-block-600">
       <div className="container">
         <h2 className="fs-small-700 fw-medium padding-block-400">
-          <span>
+          <span className="skills-heading-line">
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           </span>
           Skills

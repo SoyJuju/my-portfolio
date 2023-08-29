@@ -311,7 +311,7 @@
 
 body {
   font-size: 1rem;
-  font-family: 'Heebo', sans-serif;
+  font-family: "Heebo", sans-serif;
   color: hsl(234, 30%, 18%) !important;
 }
 
@@ -376,8 +376,8 @@ body {
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
+ul[role=list],
+ol[role=list] {
   list-style: none;
 }
 
@@ -427,7 +427,7 @@ svg {
 }
 @media (max-width: 37em) {
   .navbar--mobile-shadow::before {
-    content: '';
+    content: "";
     position: absolute;
     inset: 0;
     height: calc(100vh + 4rem);
@@ -555,7 +555,7 @@ svg {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
   -moz-column-gap: clamp(1.25rem, 5vw, 3rem);
-  column-gap: clamp(1.25rem, 5vw, 3rem);
+       column-gap: clamp(1.25rem, 5vw, 3rem);
   row-gap: 2rem;
   padding: 0.75rem 0;
 }
@@ -563,6 +563,9 @@ svg {
   .skills--container {
     grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
   }
+}
+.skills--heading-line {
+  text-decoration: line-through;
 }
 .skills--tag {
   display: flex;
@@ -575,7 +578,7 @@ svg {
   line-height: 1.2;
   padding-left: 0.75rem;
   -moz-column-gap: 1rem;
-  column-gap: 1rem;
+       column-gap: 1rem;
   transition: background-color 0.3s linear, color 0.8s ease-in-out;
   animation: scale-in-center 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
@@ -600,6 +603,6 @@ svg {
   max-height: 0;
   overflow: hidden;
   color: #ffffff;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   transition: max-height 0.3s;
-} /*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */
