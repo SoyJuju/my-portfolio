@@ -1,0 +1,107 @@
+@use '../abstracts/' as *;
+@use '../components/map-functions' as *;
+@use '../utility/breakpoints' as *;
+
+.navbar {
+  padding-top: getSize(500);
+  background-color: getColor(primary, 100);
+
+  @media (max-width: $small-breakpoint) {
+    &--mobile-shadow::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      height: calc(100vh + getSize(800));
+      background-image: linear-gradient(rgb(0 0 0 / 0), rgb(0 0 0 / 0.8));
+    }
+  }
+
+  &--wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &--mobile-toggle {
+    display: none;
+
+    @media (max-width: $small-breakpoint) {
+      display: block;
+      position: absolute;
+      top: 1.9rem;
+      right: 3.5vw;
+      cursor: pointer;
+      background: transparent;
+      border: 0;
+      padding: 0.5rem;
+    }
+  }
+
+  &--navigation {
+    @media (max-width: $small-breakpoint) {
+      display: none;
+    }
+  }
+
+  &--navigation-mobile {
+    @media (max-width: $small-breakpoint) {
+      display: block;
+      position: fixed;
+      z-index: 1;
+      padding: getSize(700);
+      inset: 7rem getSize(400) auto;
+      max-width: 35rem;
+      margin-inline: auto;
+      background-color: getColor(neutral, 100);
+      border-radius: getSize(100);
+      box-shadow: 0 0 0.75em rgb(0, 0, 0, 0.05);
+    }
+  }
+
+  &--list {
+    display: flex;
+    gap: clamp(getSize(400), 5vw, getSize(700));
+
+    @media (max-width: $small-breakpoint) {
+      display: grid;
+      gap: getSize(600);
+      text-align: center;
+    }
+
+    a {
+      font-weight: getFontWeight(regular);
+      font-size: $fs-nav;
+      color: getColor(primary, 400);
+
+      &:is(:hover, :focus) {
+        color: getColor(secondary, 400);
+      }
+
+      @media (max-width: $small-breakpoint) {
+        font-weight: getFontWeight(bold);
+      }
+
+      @media (min-width: $small-breakpoint) {
+        & {
+          -webkit-animation: text-focus-in 0.5s
+            cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+          animation: text-focus-in 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53)
+            both;
+        }
+      }
+    }
+  }
+
+  &--github-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+
+    &:is(:hover, :active, :focus) {
+      opacity: 0.6;
+    }
+
+    @media (max-width: 37em) {
+      display: none;
+    }
+  }
+}

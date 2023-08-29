@@ -1,0 +1,18 @@
+@use '../abstracts/' as *;
+@use '../components/map-functions' as *;
+@use '../utility/breakpoints' as *;
+
+.heading {
+  &--main-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &--button {
+    background-color: getColor(accent, 400);
+    &:is(:hover, :focus-visible) {
+      background-color: getColor(accent, 200);
+    }
+  }
+}
