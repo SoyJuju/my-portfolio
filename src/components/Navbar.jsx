@@ -47,16 +47,16 @@ export default function Navbar() {
             >
               <ul role="list" className="navbar--list">
                 <li>
-                  <a href="#">Home</a>
+                  <a href="/">Home</a>
                 </li>
                 <li>
-                  <a href="#">Blog</a>
+                  <a href="/blog/">Blog</a>
                 </li>
                 <li>
-                  <a href="#">Projects</a>
+                  <a href="/projects/">Projects</a>
                 </li>
                 <li>
-                  <a href="#">Contact Me</a>
+                  <a href="/contact/">Contact Me</a>
                 </li>
               </ul>
             </nav>
