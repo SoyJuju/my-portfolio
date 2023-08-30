@@ -1,23 +1,5 @@
 @use 'sass:map';
-
-$font-sizes: (
-  small: (
-    200: 0.75rem,
-    300: 0.875rem,
-    400: 1rem,
-    450: 1.125rem,
-    500: 1.25rem,
-    600: 1.5rem,
-    700: 1.875rem,
-    800: 2rem,
-    850: 2.5rem,
-    900: 2.75rem,
-  ),
-  large: (
-    700: 1.5rem,
-    900: 2rem,
-  ),
-);
+@use 'font-sizes' as *;
 
 $font-weights: (
   'regular': 400,
@@ -27,22 +9,8 @@ $font-weights: (
 );
 
 :root {
-  @each $display, $sizes in $font-sizes {
-    @each $size, $value in $sizes {
-      --fs-#{$size}: #{$value};
-    }
-  }
-
   @each $font-weight, $value in $font-weights {
     --fw-#{$font-weight}: #{$value};
-  }
-}
-
-@each $display, $sizes in $font-sizes {
-  @each $size, $value in $sizes {
-    .fs-#{$display}-#{$size} {
-      font-size: $value;
-    }
   }
 }
 
@@ -52,8 +20,8 @@ $font-weights: (
   }
 }
 
-@function getFontSize($font-size) {
-  @return map-get($font-sizes, small, $font-size);
+@function Font-Size($value) {
+  @return map-get($font-sizes, small, $value);
 }
 
 $font-family-primary: 'Heebo', sans-serif;
@@ -63,12 +31,12 @@ $ff-body: $font-family-primary;
 $ff-heading: $font-family-primary;
 $ff-accent: $font-family-secondary;
 
-$fs-body: getFontSize(400);
-$fs-nav: getFontSize(400);
-$fs-button: getFontSize(500);
+$fs-body: Font-Size(400);
+$fs-nav: Font-Size(400);
+$fs-button: Font-Size(500);
 
-$fs-primary-heading: getFontSize(900);
-$fs-secondary-heading: getFontSize(700);
+$fs-primary-heading: Font-Size(900);
+$fs-secondary-heading: Font-Size(700);
 
 .fs-primary-heading {
   font-size: $fs-primary-heading;

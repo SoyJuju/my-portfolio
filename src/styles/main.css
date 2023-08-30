@@ -95,10 +95,6 @@
   --fs-900: 2.75rem;
   --fs-700: 1.5rem;
   --fs-900: 2rem;
-  --fw-regular: 400;
-  --fw-medium: 500;
-  --fw-bold: 700;
-  --fw-extra-bold: 900;
 }
 
 .fs-small-200 {
@@ -147,6 +143,13 @@
 
 .fs-large-900 {
   font-size: 2rem;
+}
+
+:root {
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+  --fw-extra-bold: 900;
 }
 
 .fw-regular {
@@ -605,4 +608,49 @@ svg {
   color: #ffffff;
   font-family: "Montserrat", sans-serif;
   transition: max-height 0.3s;
+}
+
+.projects--container {
+  display: grid;
+  grid-auto-columns: 1fr;
+}
+.projects--tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+@media (max-width: 50em) {
+  .projects--tag {
+    flex-wrap: wrap;
+  }
+}
+.projects--image {
+  width: 23rem;
+  border-radius: 0.3rem;
+  box-shadow: 0 0 0.75em rgba(0, 0, 0, 0.3);
+}
+@media (max-width: 50em) {
+  .projects--image {
+    width: 100%;
+  }
+}
+.projects--detail {
+  display: grid;
+  grid-auto-columns: 1fr;
+  gap: 1rem;
+}
+.projects--description {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.projects--year {
+  color: #ffffff;
+  cursor: pointer;
+  border-radius: 100vmax;
+  padding: 0.1rem 1rem;
+  font-size: 1rem;
+  background-color: hsl(234, 30%, 18%);
 }/*# sourceMappingURL=main.css.map */

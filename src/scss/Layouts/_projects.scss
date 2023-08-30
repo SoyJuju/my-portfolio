@@ -1,0 +1,54 @@
+@use '../abstracts/' as *;
+@use '../components/map-functions' as *;
+@use '../utility/breakpoints' as *;
+
+.projects {
+  &--container {
+    display: grid;
+    grid-auto-columns: 1fr;
+  }
+
+  &--tag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 2rem;
+    margin-top: 3rem;
+
+    @media (max-width: $medium-breakpoint) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &--image {
+    width: 23rem;
+    border-radius: 0.3rem;
+    box-shadow: 0 0 0.75em rgb(0, 0, 0, 0.3);
+
+    @media (max-width: $medium-breakpoint) {
+      width: 100%;
+    }
+  }
+
+  &--detail {
+    display: grid;
+    grid-auto-columns: 1fr;
+    gap: 1rem;
+  }
+
+  &--description {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  &--year {
+    color: getColor(neutral, 100);
+    cursor: pointer;
+    border-radius: 100vmax;
+    padding: 0.1rem getSize(400);
+    font-size: getFontSize(small, 400);
+    background-color: getColor(primary, 400);
+  }
+}

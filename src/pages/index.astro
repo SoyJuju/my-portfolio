@@ -3,13 +3,15 @@ import Layout from '../layouts/Layout.astro';
 
 import Heading from '../components/Heading.jsx';
 import Skills from '../components/Skills.jsx';
+import Projects from '../components/Projects.jsx'
 
 import '../styles/main.css';
 ---
 
 <Layout title="Julian's Portfoio">
 	<main>
-		<Heading client:only/>
+		<Heading client:load/>
 		<Skills />
+		<Projects />
 	</main>
 </Layout>
