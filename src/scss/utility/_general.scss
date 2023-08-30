@@ -17,3 +17,10 @@ body {
   font-size: func.getFontSize(small, 450);
   font-weight: func.getFontWeight(medium);
 }
+
+.year-button {
+  color: func.getColor(neutral, 100);
+  cursor: pointer;
+  border-radius: 100vmax;
+  background-color: func.getColor(primary, 400);
+}

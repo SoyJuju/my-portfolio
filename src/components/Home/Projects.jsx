@@ -1,8 +1,8 @@
-import '../styles/main.css';
+import '../../styles/main.css';
 
-import MyPortfolioWebsite from '../assets/my-portfolio.png';
-import CoffeeWebsite from '../assets/coffee-website.png';
-import ToDoListWebsite from '../assets/todolist-website.png';
+import MyPortfolioWebsite from '../../assets/my-portfolio.png';
+import CoffeeWebsite from '../../assets/coffee-website.png';
+import ToDoListWebsite from '../../assets/todolist-website.png';
 
 function ProjectTag(Image, Link, Name, Year, Tag, Description) {
   return (
@@ -13,7 +13,7 @@ function ProjectTag(Image, Link, Name, Year, Tag, Description) {
           {Name}
         </a>
         <div class="projects--description">
-          <p class="projects--year | fw-medium">{Year}</p>
+          <p class="projects--year | year-button fw-medium">{Year}</p>
           <p class="regular fs-450 text-primary-300">{Tag}</p>
         </div>
         <p class="fs-400 fw-regular">{Description}</p>

@@ -1,9 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Timeline from '../components/Projects/Timeline.jsx'
 
 import '../styles/main.css';
 ---
 
 <Layout title="Julian's Projects">
-  <main></main>
+  <main class="timeline">
+    <Timeline client:visible/>
+  </main>
 </Layout>

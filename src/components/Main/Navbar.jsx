@@ -1,8 +1,8 @@
-import '../styles/main.css';
+import '../../styles/main.css';
 import { useState, useEffect } from 'react';
 
-import github_icon from '../assets/icon-github.svg';
-import hamburger_icon from '../assets/icon-hamburger.svg';
+import github_icon from '../../assets/icon-github.svg';
+import hamburger_icon from '../../assets/icon-hamburger.svg';
 
 export default function Navbar() {
   const [mobileMenu, setMobileMenu] = useState(false);

@@ -1,8 +1,8 @@
-import '../styles/main.css';
-import facebook from '../assets/social-icons.svg#icon-facebook';
-import instagram from '../assets/social-icons.svg#icon-instagram';
-import codewars from '../assets/social-icons.svg#icon-codewars';
-import linkedin from '../assets/social-icons.svg#icon-linkedin';
+import '../../styles/main.css';
+import facebook from '../../assets/social-icons.svg#icon-facebook';
+import instagram from '../../assets/social-icons.svg#icon-instagram';
+import codewars from '../../assets/social-icons.svg#icon-codewars';
+import linkedin from '../../assets/social-icons.svg#icon-linkedin';
 
 export default function Footbar() {
   return (

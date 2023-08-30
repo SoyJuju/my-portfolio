@@ -1,6 +1,6 @@
-import '../styles/main.css';
+import '../../styles/main.css';
 
-import heading_image from '../assets/main-img.avif';
+import heading_image from '../../assets/main-img.avif';
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
 
 export default function Heading() {

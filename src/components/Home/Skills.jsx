@@ -1,17 +1,17 @@
-import '../styles/main.css';
+import '../../styles/main.css';
 
-import HTML_logo from '../assets/icon-html.svg';
-import CSS_logo from '../assets/icon-css.svg';
-import Javascript_logo from '../assets/icon-javascript.svg';
-import Astro_logo from '../assets/icon-astro.svg';
-import React_logo from '../assets/icon-react.svg';
-import Sass_logo from '../assets/icon-sass.svg';
-import Tailwind_logo from '../assets/icon-tailwind.svg';
-import Bootstrap_logo from '../assets/icon-bootstrap.svg';
-import Python_logo from '../assets/icon-python.svg';
-import Django_logo from '../assets/icon-django.svg';
-import C_Plus_Plus_logo from '../assets/icon-cplusplus.svg';
-import Visual_Basic_logo from '../assets/icon-vb.svg';
+import HTML_logo from '../../assets/icon-html.svg';
+import CSS_logo from '../../assets/icon-css.svg';
+import Javascript_logo from '../../assets/icon-javascript.svg';
+import Astro_logo from '../../assets/icon-astro.svg';
+import React_logo from '../../assets/icon-react.svg';
+import Sass_logo from '../../assets/icon-sass.svg';
+import Tailwind_logo from '../../assets/icon-tailwind.svg';
+import Bootstrap_logo from '../../assets/icon-bootstrap.svg';
+import Python_logo from '../../assets/icon-python.svg';
+import Django_logo from '../../assets/icon-django.svg';
+import C_Plus_Plus_logo from '../../assets/icon-cplusplus.svg';
+import Visual_Basic_logo from '../../assets/icon-vb.svg';
 
 function SkillTag(SkillIcon, SkillLang, SkillLevel) {
   return (

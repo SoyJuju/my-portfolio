@@ -89,6 +89,7 @@
   --fs-450: 1.125rem;
   --fs-500: 1.25rem;
   --fs-600: 1.5rem;
+  --fs-650: 1.625rem;
   --fs-700: 1.875rem;
   --fs-800: 2rem;
   --fs-850: 2.5rem;
@@ -121,6 +122,10 @@
   font-size: 1.5rem;
 }
 
+.fs-small-650 {
+  font-size: 1.625rem;
+}
+
 .fs-small-700 {
   font-size: 1.875rem;
 }
@@ -149,7 +154,7 @@
   --fw-regular: 400;
   --fw-medium: 500;
   --fw-bold: 700;
-  --fw-extra-bold: 900;
+  --fw-black: 900;
 }
 
 .fw-regular {
@@ -164,7 +169,7 @@
   font-weight: 700;
 }
 
-.fw-extra-bold {
+.fw-black {
   font-weight: 900;
 }
 
@@ -325,6 +330,13 @@ body {
   color: #ffffff;
   font-size: 1.125rem;
   font-weight: 500;
+}
+
+.year-button {
+  color: #ffffff;
+  cursor: pointer;
+  border-radius: 100vmax;
+  background-color: hsl(234, 30%, 18%);
 }
 
 .container {
@@ -647,10 +659,65 @@ svg {
   gap: 2rem;
 }
 .projects--year {
-  color: #ffffff;
-  cursor: pointer;
-  border-radius: 100vmax;
   padding: 0.1rem 1rem;
   font-size: 1rem;
+}
+
+.timeline {
+  background-color: hsl(186, 100%, 98%);
+  color: hsl(234, 30%, 18%);
+}
+.timeline--heading {
+  display: block;
+  text-align: center;
+  padding-bottom: 1.5rem;
+}
+.timeline--image {
+  padding-block: 1rem;
+}
+.timeline--description {
+  font-weight: 400 !important;
+}
+.timeline--year {
+  padding: 0.05rem 1rem;
+  font-size: 0.75rem !important;
+}
+.timeline--tag {
+  font-size: 0.875rem !important;
+}
+
+/* Overwrite Default Timeline Stylings */
+.vertical-timeline::before {
+  top: 14% !important;
+  height: 73% !important;
+}
+
+.vertical-timeline-element-icon {
+  top: 50% !important;
+  left: 2.6% !important;
+  width: 15px !important;
+  height: 15px !important;
   background-color: hsl(234, 30%, 18%);
+  box-shadow: 0 1px 0.75em rgba(0, 0, 0, 0.8) !important;
+}
+
+@media only screen and (min-width: 1170px) {
+  .vertical-timeline--two-columns .vertical-timeline-element-icon {
+    width: 15px !important;
+    height: 15px !important;
+    left: 52.15% !important;
+    box-shadow: 0 1px 0.75em rgba(0, 0, 0, 0.8) !important;
+  }
+}
+@media only screen and (min-width: 1170px) {
+  .vertical-timeline--two-columns .vertical-timeline-element-content-arrow {
+    top: 50% !important;
+  }
+}
+.vertical-timeline-element-content-arrow {
+  top: 50% !important;
+}
+
+.vertical-timeline-element-content {
+  box-shadow: 0 1px 0.75em rgba(0, 0, 0, 0.25) !important;
 }/*# sourceMappingURL=main.css.map */

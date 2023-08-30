@@ -1,0 +1,70 @@
+@use '../abstracts/' as *;
+@use '../components/map-functions' as *;
+@use '../utility/breakpoints' as *;
+
+.timeline {
+  background-color: getColor(primary, 100);
+  color: getColor(primary, 400);
+
+  &--heading {
+    display: block;
+    text-align: center;
+    padding-bottom: getSize(500);
+  }
+
+  &--image {
+    padding-block: 1rem;
+  }
+
+  &--description {
+    font-weight: 400 !important;
+  }
+
+  &--year {
+    padding: 0.05rem getSize(400);
+    font-size: getFontSize(small, 200) !important;
+  }
+
+  &--tag {
+    font-size: getFontSize(small, 300) !important;
+  }
+}
+
+/* Overwrite Default Timeline Stylings */
+
+.vertical-timeline::before {
+  top: 14% !important;
+  height: 73% !important;
+}
+
+.vertical-timeline-element-icon {
+  top: 50% !important;
+  left: 2.6% !important;
+  width: 15px !important;
+  height: 15px !important;
+  background-color: getColor(primary, 400);
+  box-shadow: 0 1px 0.75em rgb(0, 0, 0, 0.8) !important;
+}
+
+@media only screen and (min-width: 1170px) {
+  .vertical-timeline--two-columns .vertical-timeline-element-icon {
+    width: 15px !important;
+    height: 15px !important;
+    left: 52.15% !important;
+    box-shadow: 0 1px 0.75em rgb(0, 0, 0, 0.8) !important;
+  }
+}
+
+@media only screen and (min-width: 1170px) {
+  .vertical-timeline--two-columns .vertical-timeline-element-content-arrow {
+    top: 50% !important;
+  }
+}
+
+.vertical-timeline-element-content-arrow {
+  top: 50% !important;
+}
+
+.vertical-timeline-element-content {
+  box-shadow: 0 1px 0.75em rgba(0, 0, 0, 0.25) !important;
+}

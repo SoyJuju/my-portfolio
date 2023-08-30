@@ -16,9 +16,13 @@
     "@types/react-dom": "^18.2.7",
     "@uidotdev/usehooks": "^2.1.1",
     "astro": "^2.10.14",
+    "image-size": "^1.0.2",
     "react": "^18.2.0",
+    "react-chrono": "^2.2.4",
     "react-dom": "^18.2.0",
-    "react-simple-typewriter": "^5.0.1"
+    "react-simple-typewriter": "^5.0.1",
+    "react-vertical-timeline-component": "^3.6.0",
+    "tiny-glob": "^0.2.9"
   },
   "devDependencies": {
     "sass": "^1.66.1"

@@ -44,11 +44,7 @@
   }
 
   &--year {
-    color: getColor(neutral, 100);
-    cursor: pointer;
-    border-radius: 100vmax;
     padding: 0.1rem getSize(400);
     font-size: getFontSize(small, 400);
-    background-color: getColor(primary, 400);
   }
 }
