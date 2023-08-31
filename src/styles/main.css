@@ -84,6 +84,7 @@
 
 :root {
   --fs-200: 0.75rem;
+  --fs-250: 0.82rem;
   --fs-300: 0.875rem;
   --fs-400: 1rem;
   --fs-450: 1.125rem;
@@ -100,6 +101,10 @@
 
 .fs-small-200 {
   font-size: 0.75rem;
+}
+
+.fs-small-250 {
+  font-size: 0.82rem;
 }
 
 .fs-small-300 {
@@ -696,8 +701,8 @@ svg {
   font-weight: 400 !important;
 }
 .timeline--year {
-  padding: 0.05rem 1rem;
-  font-size: 0.75rem !important;
+  padding: 0.1rem 1rem;
+  font-size: 0.82rem !important;
 }
 .timeline--tag {
   font-size: 0.875rem !important;
