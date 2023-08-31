@@ -724,4 +724,51 @@ svg {
 
 .vertical-timeline-element-content {
   box-shadow: 0 1px 0.75em rgba(0, 0, 0, 0.25) !important;
+}
+
+.vertical-timeline--animate .vertical-timeline-element-content.bounce-in {
+  animation: bounce-in-left 0.6s both !important;
+}
+
+@media only screen and (min-width: 1170px) {
+  .vertical-timeline--two-columns.vertical-timeline--animate .vertical-timeline-element.vertical-timeline-element--right .vertical-timeline-element-content.bounce-in,
+  .vertical-timeline--two-columns.vertical-timeline--animate .vertical-timeline-element:nth-child(even):not(.vertical-timeline-element--left) .vertical-timeline-element-content.bounce-in {
+    animation: bounce-in-right 0.6s both !important;
+  }
+}
+@media only screen and (max-width: 1169px) {
+  .vertical-timeline--animate .vertical-timeline-element-content.bounce-in {
+    visibility: visible;
+    animation: bounce-in-right 0.6s both !important;
+  }
+}
+@keyframes bounce-in-left {
+  0% {
+    transform: translateX(-100px);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  60% {
+    transform: translateX(10px);
+    animation-timing-function: ease-out;
+  }
+  100% {
+    transform: translateX(0);
+    animation-timing-function: ease-out;
+  }
+}
+@keyframes bounce-in-right {
+  0% {
+    transform: translateX(100px);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  60% {
+    transform: translateX(-10px);
+    animation-timing-function: ease-out;
+  }
+  100% {
+    transform: translateX(0);
+    animation-timing-function: ease-out;
+  }
 }/*# sourceMappingURL=main.css.map */
