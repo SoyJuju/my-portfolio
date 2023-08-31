@@ -27,16 +27,10 @@ export default function Timeline() {
                 {element.title}
               </a>
               <div className="projects--description">
-                <p
-                  id="timeline-year"
-                  className="timeline--year | year-button fw-medium"
-                >
+                <p className="timeline--year | year-button fw-medium">
                   {element.date}
                 </p>
-                <p
-                  id="timeline-tag"
-                  className="timeline--tag | text-primary-300"
-                >
+                <p className="timeline--tag | text-primary-300">
                   {element.tag}
                 </p>
               </div>

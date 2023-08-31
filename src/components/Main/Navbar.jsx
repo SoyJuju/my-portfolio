@@ -12,20 +12,17 @@ const timelineArrowTag = document.getElementsByClassName(
   'vertical-timeline-element-content-arrow'
 );
 
-const timelineYear = document.getElementById('timeline-year');
+const timelineYear = document.getElementsByClassName('timeline--year');
 
-const timelineTag = document.getElementById('timeline-tag');
+const timelineTag = document.getElementsByClassName('timeline--tag');
 
-function changeArrayStyle(contentArray, contentStyle, contentValue) {
+const timelineImage = document.getElementsByClassName('timeline--image');
+
+function changeStyle(contentArray, contentStyle, contentValue) {
   for (let i = 0; i < contentArray.length; i++) {
     contentArray[i].style[contentStyle] = contentValue;
   }
 }
-
-function changeStyle(contentArray, contentStyle, contentValue) {
-  contentArray.style[contentStyle] = contentValue;
-}
-
 console.log(timelineTag);
 
 export default function Navbar() {
@@ -41,20 +38,18 @@ export default function Navbar() {
 
   if (mobileMenu) {
     document.body.style.overflow = 'hidden';
-    changeArrayStyle(timelineContainer, 'background', 'transparent');
-    changeArrayStyle(
-      timelineArrowTag,
-      'border-right-color',
-      'rgb(119, 124, 124)'
-    );
+    changeStyle(timelineContainer, 'background', 'transparent');
+    changeStyle(timelineArrowTag, 'border-right-color', 'rgb(119, 124, 124)');
     changeStyle(timelineYear, 'color', 'rgb(119, 124, 124)');
-    changeStyle(timelineTag, 'opacity', '0.5');
+    changeStyle(timelineTag, 'opacity', '0.7');
+    changeStyle(timelineImage, 'opacity', '0.3');
   } else {
     document.body.style.overflow = 'auto';
-    changeArrayStyle(timelineContainer, 'background', '#fff');
-    changeArrayStyle(timelineArrowTag, 'border-right-color', '#fff');
+    changeStyle(timelineContainer, 'background', '#fff');
+    changeStyle(timelineArrowTag, 'border-right-color', '#fff');
     changeStyle(timelineYear, 'color', '#fff');
     changeStyle(timelineTag, 'opacity', '1');
+    changeStyle(timelineImage, 'opacity', '1');
   }
 
   return (
