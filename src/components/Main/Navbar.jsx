@@ -22,7 +22,7 @@ export default function Navbar() {
           <div className="navbar--wrapper">
             <a
               href=""
-              className="fw-bold fs-small-700 text-secondary-400 tracking-in-expand"
+              className="fw-bold fs-small-700 text-secondary-400 focus-in-expand"
             >
               julian.hein
             </a>
