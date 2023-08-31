@@ -647,7 +647,8 @@ svg {
   align-items: center;
   justify-content: center;
   gap: 2rem;
-  margin-top: 3rem;
+  padding-block: 2.5rem;
+  border-bottom: 1px solid rgba(182, 182, 182, 0.552);
 }
 @media (max-width: 50em) {
   .projects--tag {
