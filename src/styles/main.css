@@ -536,11 +536,6 @@ svg {
     font-weight: 700;
   }
 }
-@media (min-width: 37em) {
-  .navbar--list a {
-    animation: text-focus-in 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-  }
-}
 .navbar--github-icon {
   width: 2.5rem;
   height: 2.5rem;

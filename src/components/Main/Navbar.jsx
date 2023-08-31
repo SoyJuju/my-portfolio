@@ -57,10 +57,7 @@ export default function Navbar() {
       <div className={mobileMenu ? 'navbar--mobile-shadow' : ''}>
         <div className="container">
           <div className="navbar--wrapper">
-            <a
-              href=""
-              className="fw-bold fs-small-700 text-secondary-400 focus-in-expand"
-            >
+            <a href="" className="fw-bold fs-small-700 text-secondary-400">
               julian.hein
             </a>
             <button
