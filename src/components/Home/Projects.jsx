@@ -24,7 +24,7 @@ function ProjectTag(Image, Link, Name, Year, Tag, Description) {
 
 export default function Projects() {
   return (
-    <section class="projects bg-neutral-100 text-primary-400 padding-block-800">
+    <section class="projects bg-primary-100 text-primary-400 padding-block-800">
       <div class="container">
         <h2 class="fs-small-700 fw-medium">Featured Works</h2>
         <ul role="list" class="projects--container">

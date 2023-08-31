@@ -5,7 +5,7 @@ import ToDoListWebsite from '../../assets/todolist-website.png';
 let timelineElements = [
   {
     id: 1,
-    title: 'Coffee Website',
+    title: 'First Coffee Website',
     url: 'https://baristachawsu.great-site.net',
     description:
       'This website is made for the business called Barista Chaw Su. They train people to be baristas and also works as a cafe consultant. I made this so they have an easier time training people and for me to be able to look up recipes quickly.',
@@ -42,6 +42,16 @@ let timelineElements = [
     date: '2023',
     tag: 'Portfolio',
     image: MyPortfolioWebsite,
+  },
+  {
+    id: 5,
+    title: 'Main Coffee Website',
+    url: 'https://baristachawsu.netlify.app',
+    description:
+      'This is an improved version of the first coffee website I made for Barista Chaw Su. This improved version is built upon Astro, React and SCSS. The design is quite similar but the frameworks used are different.',
+    date: '2023',
+    tag: 'Educational',
+    image: CoffeeWebsite,
   },
 ];
 
