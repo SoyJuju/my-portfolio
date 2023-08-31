@@ -15,7 +15,7 @@ import Visual_Basic_logo from '../../assets/icon-vb.svg';
 
 function SkillTag(SkillIcon, SkillLang, SkillLevel) {
   return (
-    <li className="skills--tag">
+    <li className="skills--tag | fade-in">
       <img className="skills--icon" src={SkillIcon} alt="" />
       <div>
         <h3 className="skills--lang | fs-smsll-400 fw-bold">{SkillLang}</h3>
