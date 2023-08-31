@@ -4,16 +4,58 @@ import { useState, useEffect } from 'react';
 import github_icon from '../../assets/icon-github.svg';
 import hamburger_icon from '../../assets/icon-hamburger.svg';
 
+const timelineContainer = document.getElementsByClassName(
+  'vertical-timeline-element-content bounce-in'
+);
+
+const timelineArrowTag = document.getElementsByClassName(
+  'vertical-timeline-element-content-arrow'
+);
+
+const timelineYear = document.getElementById('timeline-year');
+
+const timelineTag = document.getElementById('timeline-tag');
+
+function changeArrayStyle(contentArray, contentStyle, contentValue) {
+  for (let i = 0; i < contentArray.length; i++) {
+    contentArray[i].style[contentStyle] = contentValue;
+  }
+}
+
+function changeStyle(contentArray, contentStyle, contentValue) {
+  contentArray.style[contentStyle] = contentValue;
+}
+
+console.log(timelineTag);
+
 export default function Navbar() {
   const [mobileMenu, setMobileMenu] = useState(false);
 
   useEffect(() => {
     window.addEventListener('resize', () => setMobileMenu(false));
+
+    return () => {
+      removeEventListener('resize', () => setMobileMenu(false));
+    };
   }, [mobileMenu]);
 
-  mobileMenu
-    ? (document.body.style.overflow = 'hidden')
-    : (document.body.style.overflow = 'auto');
+  if (mobileMenu) {
+    document.body.style.overflow = 'hidden';
+    changeArrayStyle(timelineContainer, 'background', 'transparent');
+    changeArrayStyle(
+      timelineArrowTag,
+      'border-right-color',
+      'rgb(119, 124, 124)'
+    );
+    changeStyle(timelineYear, 'color', 'rgb(119, 124, 124)');
+    changeStyle(timelineTag, 'opacity', '0.5');
+  } else {
+    document.body.style.overflow = 'auto';
+    changeArrayStyle(timelineContainer, 'background', '#fff');
+    changeArrayStyle(timelineArrowTag, 'border-right-color', '#fff');
+    changeStyle(timelineYear, 'color', '#fff');
+    changeStyle(timelineTag, 'opacity', '1');
+  }
 
   return (
     <header className="navbar | bg-primary-100">

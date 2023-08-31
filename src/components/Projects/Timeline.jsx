@@ -26,11 +26,19 @@ export default function Timeline() {
               >
                 {element.title}
               </a>
-              <div class="projects--description">
-                <p class="timeline--year | year-button fw-medium">
+              <div className="projects--description">
+                <p
+                  id="timeline-year"
+                  className="timeline--year | year-button fw-medium"
+                >
                   {element.date}
                 </p>
-                <p class="timeline--tag | text-primary-300">{element.tag}</p>
+                <p
+                  id="timeline-tag"
+                  className="timeline--tag | text-primary-300"
+                >
+                  {element.tag}
+                </p>
               </div>
               <p className="timeline--description">{element.description}</p>
             </VerticalTimelineElement>
