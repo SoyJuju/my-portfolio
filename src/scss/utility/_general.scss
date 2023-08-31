@@ -7,6 +7,7 @@ body {
   font-size: fonts.$fs-body;
   font-family: fonts.$font-family-primary;
   color: func.getColor(primary, 400) !important;
+  background-color: func.getColor(primary, 100);
 }
 
 .square-button {
