@@ -3,10 +3,14 @@
 @use '../utility/breakpoints' as *;
 
 .heading {
-  &--main-img {
+  &--main-img-container {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  &--main-img {
+    max-width: 100%;
   }
 
   &--button {

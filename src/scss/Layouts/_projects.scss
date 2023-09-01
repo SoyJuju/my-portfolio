@@ -23,6 +23,14 @@
     }
   }
 
+  &--image-container {
+    width: 23rem;
+
+    @media (max-width: $medium-breakpoint) {
+      width: 100%;
+    }
+  }
+
   &--image {
     width: 23rem;
     border-radius: 0.3rem;

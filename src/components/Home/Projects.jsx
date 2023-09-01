@@ -4,19 +4,49 @@ import MyPortfolioWebsite from '../../assets/my-portfolio.png';
 import CoffeeWebsite from '../../assets/coffee-website.png';
 import ToDoListWebsite from '../../assets/todolist-website.png';
 
+import { motion, useInView, useAnimation } from 'framer-motion';
+import { useRef, useEffect } from 'react';
+
 function ProjectTag(Image, Link, Name, Year, Tag, Description) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  const mainControls = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start('visible');
+    }
+  }, [isInView]);
+
   return (
-    <li class="projects--tag">
-      <img class="projects--image" src={Image} alt="" />
-      <div class="projects--detail">
-        <a href={Link} class="fs-secondary-heading fw-black text-primary-400">
+    <li className="projects--tag">
+      <div ref={ref} className="project--image-container">
+        <motion.div
+          variants={{
+            hiddden: { opacity: 0, x: -100 },
+            visible: { opacity: 1, x: 0 },
+          }}
+          initial="hiddden"
+          animate={mainControls}
+          transition={{ duration: 1 }}
+        >
+          <img className="projects--image" src={Image} alt="" />
+        </motion.div>
+      </div>
+
+      <div className="projects--detail">
+        <a
+          href={Link}
+          className="fs-secondary-heading fw-black text-primary-400"
+        >
           {Name}
         </a>
-        <div class="projects--description">
-          <p class="projects--year | year-button fw-medium">{Year}</p>
-          <p class="regular fs-450 text-primary-300">{Tag}</p>
+        <div className="projects--description">
+          <p className="projects--year | year-button fw-medium">{Year}</p>
+          <p className="regular fs-450 text-primary-300">{Tag}</p>
         </div>
-        <p class="fs-400 fw-regular">{Description}</p>
+        <p className="fs-400 fw-regular">{Description}</p>
       </div>
     </li>
   );
@@ -24,10 +54,10 @@ function ProjectTag(Image, Link, Name, Year, Tag, Description) {
 
 export default function Projects() {
   return (
-    <section class="projects bg-primary-100 text-primary-400 padding-block-800">
-      <div class="container">
-        <h2 class="fs-small-700 fw-medium">Featured Works</h2>
-        <ul role="list" class="projects--container">
+    <section className="projects bg-primary-100 text-primary-400 padding-block-800">
+      <div className="container">
+        <h2 className="fs-small-700 fw-medium">Featured Works</h2>
+        <ul role="list" className="projects--container">
           {ProjectTag(
             MyPortfolioWebsite,
             '#',

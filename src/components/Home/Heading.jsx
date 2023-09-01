@@ -30,8 +30,8 @@ export default function Heading() {
               Download Resume
             </button>
           </div>
-          <div className="heading--main-img | small-reverse-order slide-in-left">
-            <img className="" src={heading_image} alt="" />
+          <div className="heading--main-img-container | small-reverse-order slide-in-left">
+            <img className="heading--main-img" src={heading_image} alt="" />
           </div>
         </div>
       </div>
