@@ -4,12 +4,14 @@ import MyPortfolioWebsite from '../../assets/my-portfolio.png';
 import CoffeeWebsite from '../../assets/coffee-website.png';
 import ToDoListWebsite from '../../assets/todolist-website.png';
 
+import { useMediaQuery } from '@mui/material';
 import { motion, useInView, useAnimation } from 'framer-motion';
 import { useRef, useEffect } from 'react';
 
 function ProjectTag(Image, Link, Name, Year, Tag, Description) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
+  const isDesktop = useMediaQuery('min-width-35em');
 
   const mainControls = useAnimation();
 
@@ -23,8 +25,8 @@ function ProjectTag(Image, Link, Name, Year, Tag, Description) {
     <li ref={ref} className="projects--tag">
       <motion.div
         variants={{
-          hiddden: { opacity: 0, x: -30 },
-          visible: { opacity: 1, x: 0 },
+          hiddden: isDesktop ? { opacity: 0, x: -30 } : { opacity: 0, y: 10 },
+          visible: isDesktop ? { opacity: 1, x: 0 } : { opacity: 1, y: 0 },
         }}
         initial="hiddden"
         animate={mainControls}
@@ -34,8 +36,8 @@ function ProjectTag(Image, Link, Name, Year, Tag, Description) {
       </motion.div>
       <motion.div
         variants={{
-          hiddden: { opacity: 0, x: 30 },
-          visible: { opacity: 1, x: 0 },
+          hiddden: isDesktop ? { opacity: 0, x: 30 } : { opacity: 0, y: 10 },
+          visible: isDesktop ? { opacity: 1, x: 0 } : { opacity: 1, y: 0 },
         }}
         initial="hiddden"
         animate={mainControls}

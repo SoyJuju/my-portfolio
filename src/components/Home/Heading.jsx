@@ -13,7 +13,7 @@ export default function Heading() {
     <section className="heading | bg-primary-100 text-primary-400 padding-block-700">
       <div className="container">
         <div className="two-columns">
-          <div className="flow slide-in-left">
+          <div className="heading--intro | flow">
             <h1 className="fs-primary-heading fw-bold text-primary-400">
               Hi, I am Julian, <br />
               <span className="text-accent-400">{text}</span>
@@ -30,7 +30,7 @@ export default function Heading() {
               Download Resume
             </button>
           </div>
-          <div className="heading--main-img-container | small-reverse-order slide-in-right">
+          <div className="heading--main-img-container | small-reverse-order">
             <img className="heading--main-img" src={heading_image} alt="" />
           </div>
         </div>
