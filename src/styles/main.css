@@ -840,4 +840,5 @@ svg {
   padding: 0.1rem;
   background-color: hsl(234, 30%, 18%);
   box-shadow: 0 4px 0.6em rgba(0, 0, 0, 0.4);
+  border-radius: 100vmax;
 }/*# sourceMappingURL=main.css.map */

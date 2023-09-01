@@ -13,7 +13,7 @@ export default function ContactMe() {
         </p>
         <form
           target="_self"
-          action="https://formsubmit.co/julianthant@gmail.com"
+          action="https://formsubmit.co/5385df37b9c3edd6ea761a3900d0f923"
           method="POST"
           className="contact--form"
         >
@@ -45,6 +45,11 @@ export default function ContactMe() {
             placeholder="What is your message?"
             required
           ></textarea>
+          <input
+            type="hidden"
+            name="_next"
+            value="https://julianhein.netlify.app/"
+          ></input>
           <button type="submit" className="contact--submit | square-button">
             Send
           </button>
