@@ -13,14 +13,41 @@ import Django_logo from '../../assets/icon-django.svg';
 import C_Plus_Plus_logo from '../../assets/icon-cplusplus.svg';
 import Visual_Basic_logo from '../../assets/icon-vb.svg';
 
+import { motion, useInView, useAnimation } from 'framer-motion';
+import { useRef, useEffect } from 'react';
+
 function SkillTag(SkillIcon, SkillLang, SkillLevel) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  const mainControls = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start('visible');
+    }
+  }, [isInView]);
+
   return (
-    <li className="skills--tag | fade-in">
-      <img className="skills--icon" src={SkillIcon} alt="" />
-      <div>
-        <h3 className="skills--lang | fs-smsll-400 fw-bold">{SkillLang}</h3>
-        <p className="skills--level | fw-regular fs-small-200">{SkillLevel}</p>
-      </div>
+    <li ref={ref}>
+      <motion.div
+        variants={{
+          hiddden: { opacity: 0, y: 10 },
+          visible: { opacity: 1, y: 0 },
+        }}
+        initial="hiddden"
+        animate={mainControls}
+        transition={{ duration: 0.7 }}
+        className="skills--tag"
+      >
+        <img className="skills--icon" src={SkillIcon} alt="" />
+        <div>
+          <h3 className="skills--lang | fs-smsll-400 fw-bold">{SkillLang}</h3>
+          <p className="skills--level | fw-regular fs-small-200">
+            {SkillLevel}
+          </p>
+        </div>
+      </motion.div>
     </li>
   );
 }

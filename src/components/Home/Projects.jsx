@@ -20,34 +20,41 @@ function ProjectTag(Image, Link, Name, Year, Tag, Description) {
   }, [isInView]);
 
   return (
-    <li className="projects--tag">
-      <div ref={ref} className="project--image-container">
-        <motion.div
-          variants={{
-            hiddden: { opacity: 0, x: -30 },
-            visible: { opacity: 1, x: 0 },
-          }}
-          initial="hiddden"
-          animate={mainControls}
-          transition={{ duration: 0.7 }}
-        >
-          <img className="projects--image" src={Image} alt="" />
-        </motion.div>
-      </div>
-
-      <div className="projects--detail">
-        <a
-          href={Link}
-          className="fs-secondary-heading fw-black text-primary-400"
-        >
-          {Name}
-        </a>
-        <div className="projects--description">
-          <p className="projects--year | year-button fw-medium">{Year}</p>
-          <p className="regular fs-450 text-primary-300">{Tag}</p>
+    <li ref={ref} className="projects--tag">
+      <motion.div
+        variants={{
+          hiddden: { opacity: 0, x: -30 },
+          visible: { opacity: 1, x: 0 },
+        }}
+        initial="hiddden"
+        animate={mainControls}
+        transition={{ duration: 0.7 }}
+      >
+        <img className="projects--image" src={Image} alt="" />
+      </motion.div>
+      <motion.div
+        variants={{
+          hiddden: { opacity: 0, x: 30 },
+          visible: { opacity: 1, x: 0 },
+        }}
+        initial="hiddden"
+        animate={mainControls}
+        transition={{ duration: 0.7 }}
+      >
+        <div className="projects--detail">
+          <a
+            href={Link}
+            className="fs-secondary-heading fw-black text-primary-400"
+          >
+            {Name}
+          </a>
+          <div className="projects--description">
+            <p className="projects--year | year-button fw-medium">{Year}</p>
+            <p className="regular fs-450 text-primary-300">{Tag}</p>
+          </div>
+          <p className="fs-400 fw-regular">{Description}</p>
         </div>
-        <p className="fs-400 fw-regular">{Description}</p>
-      </div>
+      </motion.div>
     </li>
   );
 }
