@@ -24,7 +24,7 @@ function ProjectTag(Image, Link, Name, Year, Tag, Description) {
       <div ref={ref} className="project--image-container">
         <motion.div
           variants={{
-            hiddden: { opacity: 0, x: -100 },
+            hiddden: { opacity: 0, x: -60 },
             visible: { opacity: 1, x: 0 },
           }}
           initial="hiddden"
