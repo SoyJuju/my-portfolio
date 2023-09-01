@@ -29,7 +29,7 @@ function ProjectTag(Image, Link, Name, Year, Tag, Description) {
           }}
           initial="hiddden"
           animate={mainControls}
-          transition={{ duration: 1 }}
+          transition={{ duration: 0.6 }}
         >
           <img className="projects--image" src={Image} alt="" />
         </motion.div>
