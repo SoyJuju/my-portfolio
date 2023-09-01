@@ -9,10 +9,6 @@
     align-items: center;
   }
 
-  &--main-img {
-    max-width: 100%;
-  }
-
   &--button {
     background-color: getColor(accent, 400);
     &:is(:hover, :focus-visible) {

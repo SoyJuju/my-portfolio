@@ -18,11 +18,6 @@ const timelineTag = document.getElementsByClassName('timeline--tag');
 
 const timelineImage = document.getElementsByClassName('timeline--image');
 
-function changeStyle(contentArray, contentStyle, contentValue) {
-  for (let i = 0; i < contentArray.length; i++) {
-    contentArray[i].style[contentStyle] = contentValue;
-  }
-}
 console.log(timelineTag);
 
 export default function Navbar() {
@@ -31,26 +26,30 @@ export default function Navbar() {
   useEffect(() => {
     window.addEventListener('resize', () => setMobileMenu(false));
 
+    if (mobileMenu) {
+      for (let i = 0; i < timelineContainer.length; i++) {
+        document.body.style.overflow = 'hidden';
+        timelineContainer[i].style['background'] = 'transparent';
+        timelineArrowTag[i].style['border-right-color'] = 'rgb(119, 124, 124)';
+        timelineYear[i].style['color'] = 'rgb(119, 124, 124)';
+        timelineTag[i].style['opacity'] = '0.7';
+        timelineImage[i].style['opacity'] = '0.3';
+      }
+    } else {
+      for (let i = 0; i < timelineContainer.length; i++) {
+        document.body.style.overflow = 'auto';
+        timelineContainer[i].style['background'] = '#fff';
+        timelineArrowTag[i].style['border-right-color'] = '#fff';
+        timelineYear[i].style['color'] = '#fff';
+        timelineTag[i].style['opacity'] = '1';
+        timelineImage[i].style['opacity'] = '1';
+      }
+    }
+
     return () => {
       removeEventListener('resize', () => setMobileMenu(false));
     };
   }, [mobileMenu]);
-
-  if (mobileMenu) {
-    document.body.style.overflow = 'hidden';
-    changeStyle(timelineContainer, 'background', 'transparent');
-    changeStyle(timelineArrowTag, 'border-right-color', 'rgb(119, 124, 124)');
-    changeStyle(timelineYear, 'color', 'rgb(119, 124, 124)');
-    changeStyle(timelineTag, 'opacity', '0.7');
-    changeStyle(timelineImage, 'opacity', '0.3');
-  } else {
-    document.body.style.overflow = 'auto';
-    changeStyle(timelineContainer, 'background', '#fff');
-    changeStyle(timelineArrowTag, 'border-right-color', '#fff');
-    changeStyle(timelineYear, 'color', '#fff');
-    changeStyle(timelineTag, 'opacity', '1');
-    changeStyle(timelineImage, 'opacity', '1');
-  }
 
   return (
     <header className="navbar | bg-primary-100">

@@ -442,6 +442,7 @@ body {
 img,
 picture,
 svg {
+  max-width: 100%;
   display: block;
 }
 
@@ -577,9 +578,6 @@ svg {
   justify-content: center;
   align-items: center;
 }
-.heading--main-img {
-  max-width: 100%;
-}
 .heading--button {
   background-color: hsl(0, 100%, 70%);
 }
@@ -669,12 +667,14 @@ svg {
 }
 .projects--image {
   width: 23rem;
+  max-width: none;
   border-radius: 0.3rem;
   box-shadow: 0 0 0.75em rgba(0, 0, 0, 0.3);
 }
 @media (max-width: 50em) {
   .projects--image {
     width: 100%;
+    max-width: none;
   }
 }
 .projects--detail {
