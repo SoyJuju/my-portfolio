@@ -1,0 +1,40 @@
+@use '../abstracts/' as *;
+@use '../components/map-functions' as *;
+@use '../utility/breakpoints' as *;
+
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: getSize(800);
+
+  &--information {
+    padding: 1rem;
+    box-shadow: 0 0 0.75em rgb(0, 0, 0, 0.3);
+    max-width: 25rem;
+    width: min(25rem, calc(100% - 0.6rem));
+  }
+
+  &--form {
+    display: grid;
+  }
+
+  &--input {
+    background-color: getColor(primary, 100);
+    border: 0;
+
+    box-shadow: 0 0 0.75em rgb(0, 0, 0, 0.2);
+    border-radius: 0.3rem;
+    padding: 0.5rem 1rem;
+    resize: none;
+    color: getColor(primary, 400);
+  }
+
+  &--submit {
+    margin-top: 1.5rem;
+    width: 4.2rem;
+    padding: 0.1rem;
+    background-color: getColor(primary, 400);
+    box-shadow: 0 4px 0.6em rgb(0, 0, 0, 0.4);
+  }
+}

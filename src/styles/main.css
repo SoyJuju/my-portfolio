@@ -809,4 +809,35 @@ svg {
     transform: translateX(0);
     opacity: 1;
   }
+}
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 4rem;
+}
+.contact--information {
+  padding: 1rem;
+  box-shadow: 0 0 0.75em rgba(0, 0, 0, 0.3);
+  max-width: 25rem;
+  width: min(25rem, 100% - 0.6rem);
+}
+.contact--form {
+  display: grid;
+}
+.contact--input {
+  background-color: hsl(186, 100%, 98%);
+  border: 0;
+  box-shadow: 0 0 0.75em rgba(0, 0, 0, 0.2);
+  border-radius: 0.3rem;
+  padding: 0.5rem 1rem;
+  resize: none;
+  color: hsl(234, 30%, 18%);
+}
+.contact--submit {
+  margin-top: 1.5rem;
+  width: 4.2rem;
+  padding: 0.1rem;
+  background-color: hsl(234, 30%, 18%);
+  box-shadow: 0 4px 0.6em rgba(0, 0, 0, 0.4);
 }/*# sourceMappingURL=main.css.map */
