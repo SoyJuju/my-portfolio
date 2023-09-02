@@ -4,6 +4,7 @@ import Layout from '../layouts/Layout.astro';
 import Heading from '../components/Home/Heading.jsx';
 import Skills from '../components/Home/Skills.jsx';
 import Projects from '../components/Home/Projects.jsx'
+import Dashboard from '../components/Home/CodingDashboard'
 
 import '../styles/main.css';
 ---
@@ -12,6 +13,7 @@ import '../styles/main.css';
 	<main>
 		<Heading client:load/>
 		<Skills  client:load/>
+		<Dashboard client:load/>
 		<Projects client:load/>
 	</main>
 </Layout>
