@@ -104,7 +104,7 @@
   --fs-800: 2rem;
   --fs-850: 2.5rem;
   --fs-900: 2.75rem;
-  --fs-950: 3.5rem;
+  --fs-950: 3.4rem;
   --fs-700: 1.5rem;
   --fs-900: 2rem;
 }
@@ -158,7 +158,7 @@
 }
 
 .fs-small-950 {
-  font-size: 3.5rem;
+  font-size: 3.4rem;
 }
 
 .fs-large-700 {
@@ -839,7 +839,7 @@ svg {
   gap: 3rem;
 }
 .contact--introduction {
-  width: 34.5rem;
+  width: 34rem;
   font-family: "Montserrat", sans-serif;
 }
 .contact--subintro {
@@ -880,8 +880,8 @@ svg {
 .contact--information {
   padding: 1.5rem 1rem;
   box-shadow: 0 0 0.75em rgba(0, 0, 0, 0.3);
-  max-width: 33.5rem;
-  width: min(33.5rem, 100%);
+  max-width: 34rem;
+  width: min(34rem, 100%);
   background-color: hsl(234, 30%, 18%);
   color: hsl(186, 100%, 98%);
   border-radius: 0.4rem;
