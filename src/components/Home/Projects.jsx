@@ -8,55 +8,65 @@ import { useMediaQuery } from '@mui/material';
 import { motion, useInView, useAnimation } from 'framer-motion';
 import { useRef, useEffect } from 'react';
 
-function ProjectTag(Image, Link, Name, Year, Tag, Description) {
+function animateComponent(component, x_value) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
-  const isDesktop = useMediaQuery('min-width-35em');
-
+  const isDesktop = useMediaQuery('(min-width: 600px)');
   const mainControls = useAnimation();
 
+  const variants = isDesktop
+    ? {
+        hidden: { opacity: 0, y: 0, x: x_value },
+        visible: { opacity: 1, y: 0, x: 0 },
+      }
+    : {
+        hidden: { opacity: 0, x: 0, y: 20 },
+        visible: { opacity: 1, x: 0, y: 0 },
+      };
+
   useEffect(() => {
+    console.log('isInView:', isInView);
     if (isInView) {
-      mainControls.start('visible');
+      console.log('Animation started.');
+      console.log(variants.hidden);
+      mainControls.start(variants.visible);
     }
   }, [isInView]);
 
   return (
-    <li ref={ref} className="projects--tag">
-      <motion.div
-        variants={{
-          hiddden: isDesktop ? { opacity: 0, x: -30 } : { opacity: 0, y: 10 },
-          visible: isDesktop ? { opacity: 1, x: 0 } : { opacity: 1, y: 0 },
-        }}
-        initial="hiddden"
-        animate={mainControls}
-        transition={{ duration: 0.7 }}
-      >
-        <img className="projects--image" src={Image} alt="" />
-      </motion.div>
-      <motion.div
-        variants={{
-          hiddden: isDesktop ? { opacity: 0, x: 30 } : { opacity: 0, y: 10 },
-          visible: isDesktop ? { opacity: 1, x: 0 } : { opacity: 1, y: 0 },
-        }}
-        initial="hiddden"
-        animate={mainControls}
-        transition={{ duration: 0.7 }}
-      >
-        <div className="projects--detail">
-          <a
-            href={Link}
-            className="fs-secondary-heading fw-black text-primary-400"
-          >
-            {Name}
-          </a>
-          <div className="projects--description">
-            <p className="projects--year | year-button fw-medium">{Year}</p>
-            <p className="regular fs-450 text-primary-300">{Tag}</p>
-          </div>
-          <p className="fs-400 fw-regular">{Description}</p>
-        </div>
-      </motion.div>
+    <motion.div
+      variants={variants}
+      initial={variants.hidden}
+      animate={mainControls}
+      transition={{ duration: 0.7 }}
+      ref={ref}
+    >
+      {component}
+    </motion.div>
+  );
+}
+
+function ProjectTag(Image, Link, Name, Year, Tag, Description) {
+  const divComp = (
+    <div className="projects--detail">
+      <a href={Link} className="fs-secondary-heading fw-black text-primary-400">
+        {Name}
+      </a>
+      <div className="projects--description">
+        <p className="projects--year | year-button fw-medium">{Year}</p>
+        <p className="regular fs-450 text-primary-300">{Tag}</p>
+      </div>
+      <p className="fs-400 fw-regular">{Description}</p>
+    </div>
+  );
+
+  return (
+    <li className="projects--tag">
+      {animateComponent(
+        <img className="projects--image" src={Image} alt="" />,
+        -30
+      )}
+      {animateComponent(divComp, 30)}
     </li>
   );
 }

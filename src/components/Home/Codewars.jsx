@@ -1,4 +1,5 @@
 import '../../styles/main.css';
+
 import { useState, useEffect } from 'react';
 
 export default function Codewars() {
@@ -30,12 +31,20 @@ export default function Codewars() {
           <p className="codewars--info | info">
             Rank: {data.ranks.overall.name}
           </p>
+        </div>
+      ) : (
+        <p className="info">No overall rank available.</p>
+      )}
+      {data.ranks &&
+      typeof data.ranks === 'object' &&
+      'overall' in data.ranks ? (
+        <div className="codewars--ranks">
           <p className="codewars--info | info">
             Score: {data.ranks.overall.score}
           </p>
         </div>
       ) : (
-        <p>No overall rank available.</p>
+        <p className="info">No overall rank available.</p>
       )}
       <p className="codewars--info | info">
         Leaderboard Position: #{data.leaderboardPosition}
@@ -47,7 +56,7 @@ export default function Codewars() {
           Total Solved: {data.codeChallenges.totalCompleted} katas
         </p>
       ) : (
-        <p>No overall rank available.</p>
+        <p className="info">No overall rank available.</p>
       )}
     </div>
   );

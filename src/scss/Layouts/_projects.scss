@@ -4,8 +4,8 @@
 
 .projects {
   &--container {
-    display: grid;
-    grid-auto-columns: 1fr;
+    display: flex;
+    flex-direction: column;
   }
 
   &--tag {
