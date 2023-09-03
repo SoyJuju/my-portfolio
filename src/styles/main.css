@@ -623,6 +623,9 @@ svg {
 }
 
 .heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: min(100vh - 17.1825em, 100%);
 }
 .heading--intro {

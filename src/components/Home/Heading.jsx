@@ -10,7 +10,7 @@ export default function Heading() {
   });
 
   return (
-    <section className="heading | bg-primary-100 text-primary-400 padding-block-700">
+    <section className="heading | bg-primary-100 text-primary-400">
       <div className="container">
         <div className="two-columns">
           <div className="heading--intro | flow">
