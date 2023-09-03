@@ -834,8 +834,13 @@ svg {
   gap: 3rem;
 }
 .contact--introduction {
-  width: 34rem;
+  max-width: 34rem;
+  width: min(34rem, 100%);
   font-family: "Montserrat", sans-serif;
+}
+.contact--introduction-div {
+  max-width: 34rem;
+  width: min(34rem, 100%);
 }
 .contact--subintro {
   font-family: "Montserrat", sans-serif;
@@ -880,6 +885,10 @@ svg {
   background-color: hsl(234, 30%, 18%);
   color: hsl(186, 100%, 98%);
   border-radius: 0.4rem;
+}
+.contact--information-div {
+  max-width: 34rem;
+  width: min(34rem, 100%);
 }
 .contact--form {
   display: grid;
