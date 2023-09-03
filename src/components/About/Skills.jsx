@@ -32,12 +32,13 @@ function SkillTag(SkillIcon, SkillLang, SkillLevel) {
     <li ref={ref}>
       <motion.div
         variants={{
-          hiddden: { opacity: 0, y: 10 },
+          hiddden: { opacity: 0, y: 20 },
           visible: { opacity: 1, y: 0 },
         }}
         initial="hiddden"
         animate={mainControls}
         transition={{ duration: 0.7 }}
+        trans
         className="skills--tag"
       >
         <img className="skills--icon" src={SkillIcon} alt="" />
