@@ -7,7 +7,8 @@
   align-items: center;
   justify-content: center;
 
-  height: min(calc(100vh - 17.1825em), 100%);
+  min-height: calc(100vh - 17em);
+  margin-top: 3rem;
 
   &--intro {
     animation: slide-in-left 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
