@@ -3,7 +3,7 @@
 @use '../utility/breakpoints' as *;
 
 .heading {
-  &--intro {
+  height: calc(100vh - 285px) &--intro {
     animation: slide-in-left 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
     @media (max-width: 35em) {
       animation: slide-in-top 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
