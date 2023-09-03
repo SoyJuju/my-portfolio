@@ -45,8 +45,10 @@ function animateComponent(component, x_value) {
 
 export default function CodingDashboard() {
   return (
-    <section className="dashboard | container padding-block-200">
-      <h2 className="fs-small-700 fw-medium padding-block-600">Coding Stats</h2>
+    <section className="dashboard | container padding-block-700">
+      <h2 className="dashboard--heading fs-small-700 fw-medium">
+        Coding Stats
+      </h2>
       <div className="two-columns">
         {animateComponent(<Codewars />, -30)}
         {animateComponent(<Leetcode />, 30)}

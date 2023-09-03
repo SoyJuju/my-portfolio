@@ -2,9 +2,6 @@
 import Layout from '../layouts/Layout.astro';
 
 import Heading from '../components/Home/Heading.jsx';
-import Skills from '../components/Home/Skills.jsx';
-import Projects from '../components/Home/Projects.jsx'
-import Dashboard from '../components/Home/CodingDashboard'
 
 import '../styles/main.css';
 ---
@@ -12,8 +9,5 @@ import '../styles/main.css';
 <Layout title="Julian's Portfoio">
 	<main>
 		<Heading client:load/>
-		<Skills  client:load/>
-		<Dashboard client:only/>
-		<Projects client:only/>
 	</main>
 </Layout>

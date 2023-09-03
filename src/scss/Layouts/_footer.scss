@@ -3,7 +3,7 @@
 @use '../utility/breakpoints' as *;
 
 .footer {
-  padding-top: getSize(900);
+  padding-top: getSize(800);
   padding-bottom: getSize(700);
 
   &--container {
