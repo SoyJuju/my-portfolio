@@ -1,15 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-import Skills from '../components/About/Skills'
-import Dashboard from '../components/About/CodingDashboard'
-import Projects from '../components/About/Projects';
+import About from '../components/About/About.jsx'
 
 import '../styles/main.css';
 ---
 
 <Layout title="About Julian">
-  <Dashboard client:only/>
-	<Skills  client:only/>
-	<Projects client:only/>
+  <About client:only/>
 </Layout>
