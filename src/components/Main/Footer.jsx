@@ -34,7 +34,7 @@ export default function Footbar() {
           <li>
             <a
               aria-label="twitter"
-              href="https://www.codewars.com/users/JulianHein"
+              href="https://www.twitter.com/soy_bala/"
               target="_blank"
             >
               <svg className="footer--social-icons" style={{ width: '2.6rem' }}>
