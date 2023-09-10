@@ -54,8 +54,8 @@
       max-width: 35rem;
       margin-inline: auto;
       background-color: getColor(accent, 100);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(15px);
+      backdrop-filter: blur(27%);
+      -webkit-backdrop-filter: blur(27px);
       border-radius: getSize(100);
       box-shadow: 0 0 0.75em rgb(0, 0, 0, 0.25);
     }

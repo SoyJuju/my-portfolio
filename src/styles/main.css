@@ -5,7 +5,7 @@
   --clr-primary-400: hsl(234, 30%, 18%);
   --clr-primary-500: hsl(234, 30%, 27%);
   --clr-secondary-400: hsl(215, 90%, 42%);
-  --clr-accent-100: hsla(186, 100%, 98%, 0.4);
+  --clr-accent-100: rgba(245, 254, 255, 0.4509803922);
   --clr-accent-200: hsl(0, 100%, 80%);
   --clr-accent-400: hsl(0, 100%, 70%);
   --clr-neutral-100: #ffffff;
@@ -61,7 +61,7 @@
 }
 
 .text-accent-100 {
-  color: hsla(186, 100%, 98%, 0.4);
+  color: rgba(245, 254, 255, 0.4509803922);
 }
 
 .text-accent-200 {
@@ -73,7 +73,7 @@
 }
 
 .bg-accent-100 {
-  background-color: hsla(186, 100%, 98%, 0.4);
+  background-color: rgba(245, 254, 255, 0.4509803922);
 }
 
 .bg-accent-200 {
@@ -571,9 +571,9 @@ svg {
     inset: 5rem 1rem auto;
     max-width: 35rem;
     margin-inline: auto;
-    background-color: hsla(186, 100%, 98%, 0.4);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(15px);
+    background-color: rgba(245, 254, 255, 0.4509803922);
+    backdrop-filter: blur(27%);
+    -webkit-backdrop-filter: blur(27px);
     border-radius: 0.25rem;
     box-shadow: 0 0 0.75em rgba(0, 0, 0, 0.25);
   }
