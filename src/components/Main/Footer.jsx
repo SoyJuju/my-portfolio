@@ -1,7 +1,7 @@
 import '../../styles/main.css';
 import facebook from '../../assets/social-icons.svg#icon-facebook';
 import instagram from '../../assets/social-icons.svg#icon-instagram';
-import codewars from '../../assets/social-icons.svg#icon-codewars';
+import twitter from '../../assets/social-icons.svg#icon-twitter';
 import linkedin from '../../assets/social-icons.svg#icon-linkedin';
 
 export default function Footbar() {
@@ -33,12 +33,12 @@ export default function Footbar() {
           </li>
           <li>
             <a
-              aria-label="codewars"
+              aria-label="twitter"
               href="https://www.codewars.com/users/JulianHein"
               target="_blank"
             >
-              <svg className="footer--social-icons">
-                <use xlinkHref={codewars}></use>
+              <svg className="footer--social-icons" style={{ width: '2.6rem' }}>
+                <use xlinkHref={twitter}></use>
               </svg>
             </a>
           </li>
