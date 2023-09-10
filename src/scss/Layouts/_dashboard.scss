@@ -3,6 +3,7 @@
 @use '../utility/breakpoints' as *;
 
 .dashboard {
+  padding-top: 6rem;
   &--heading {
     margin-bottom: getSize(600);
   }

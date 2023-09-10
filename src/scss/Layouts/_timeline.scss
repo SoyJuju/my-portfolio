@@ -6,6 +6,10 @@
   background-color: getColor(primary, 100);
   color: getColor(primary, 400);
 
+  &--projects {
+    padding-top: 6.3rem;
+  }
+
   &--heading {
     display: block;
     text-align: center;
@@ -71,6 +75,7 @@
 
 .vertical-timeline-element-content {
   box-shadow: 0 1px 0.75em rgba(0, 0, 0, 0.25) !important;
+  background-color: transparent !important;
 }
 
 @media only screen and (max-width: 1169px) {

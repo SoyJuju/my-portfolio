@@ -5,6 +5,7 @@
   --clr-primary-400: hsl(234, 30%, 18%);
   --clr-primary-500: hsl(234, 30%, 27%);
   --clr-secondary-400: hsl(215, 90%, 42%);
+  --clr-accent-100: hsla(186, 100%, 98%, 0.4);
   --clr-accent-200: hsl(0, 100%, 80%);
   --clr-accent-400: hsl(0, 100%, 70%);
   --clr-neutral-100: #ffffff;
@@ -59,12 +60,20 @@
   background-color: hsl(215, 90%, 42%);
 }
 
+.text-accent-100 {
+  color: hsla(186, 100%, 98%, 0.4);
+}
+
 .text-accent-200 {
   color: hsl(0, 100%, 80%);
 }
 
 .text-accent-400 {
   color: hsl(0, 100%, 70%);
+}
+
+.bg-accent-100 {
+  background-color: hsla(186, 100%, 98%, 0.4);
 }
 
 .bg-accent-200 {
@@ -510,16 +519,16 @@ svg {
   }
 }
 .navbar {
-  padding-top: 1.5rem;
   background-color: hsl(186, 100%, 98%);
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 1;
 }
 @media (max-width: 37em) {
   .navbar--mobile-shadow::before {
     content: "";
-    position: absolute;
+    position: fixed;
     inset: 0;
-    height: calc(100vh + 4rem);
-    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
   }
 }
 .navbar--wrapper {
@@ -533,8 +542,8 @@ svg {
 @media (max-width: 37em) {
   .navbar--mobile-toggle {
     display: block;
-    position: absolute;
-    top: 1.9rem;
+    position: fixed;
+    top: 1.09375rem;
     right: 3.5vw;
     cursor: pointer;
     background: transparent;
@@ -553,12 +562,14 @@ svg {
     position: fixed;
     z-index: 1;
     padding: 3rem;
-    inset: 7rem 1rem auto;
+    inset: 5rem 1rem auto;
     max-width: 35rem;
     margin-inline: auto;
-    background-color: #ffffff;
+    background-color: hsla(186, 100%, 98%, 0.4);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(15px);
     border-radius: 0.25rem;
-    box-shadow: 0 0 0.75em rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0 0.75em rgba(0, 0, 0, 0.25);
   }
 }
 .navbar--list {
@@ -626,8 +637,8 @@ svg {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: calc(100vh - 17em);
-  margin-top: 3rem;
+  min-height: calc(100vh - 13.5rem);
+  padding-top: 6rem;
 }
 .heading--intro {
   animation: slide-in-left 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
@@ -758,6 +769,9 @@ svg {
   background-color: hsl(186, 100%, 98%);
   color: hsl(234, 30%, 18%);
 }
+.timeline--projects {
+  padding-top: 6.3rem;
+}
 .timeline--heading {
   display: block;
   text-align: center;
@@ -815,6 +829,7 @@ svg {
 
 .vertical-timeline-element-content {
   box-shadow: 0 1px 0.75em rgba(0, 0, 0, 0.25) !important;
+  background-color: transparent !important;
 }
 
 @media only screen and (max-width: 1169px) {
@@ -838,7 +853,7 @@ svg {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  padding-top: 4rem;
+  padding-top: 7rem;
   gap: 3rem;
 }
 .contact--introduction {
@@ -923,6 +938,9 @@ svg {
   opacity: 0.7;
 }
 
+.dashboard {
+  padding-top: 6rem;
+}
 .dashboard--heading {
   margin-bottom: 2rem;
 }

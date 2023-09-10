@@ -1,58 +1,43 @@
 import '../../styles/main.css';
 import { useState, useEffect } from 'react';
+import { motion, useMotionValueEvent, useScroll } from 'framer-motion';
 
 import github_icon from '../../assets/icon-github.svg';
 import hamburger_icon from '../../assets/icon-hamburger.svg';
 
-const timelineContainer = document.getElementsByClassName(
-  'vertical-timeline-element-content bounce-in'
-);
-
-const timelineArrowTag = document.getElementsByClassName(
-  'vertical-timeline-element-content-arrow'
-);
-
-const timelineYear = document.getElementsByClassName('timeline--year');
-
-const timelineTag = document.getElementsByClassName('timeline--tag');
-
-const timelineImage = document.getElementsByClassName('timeline--image');
-
-console.log(timelineTag);
-
 export default function Navbar() {
   const [mobileMenu, setMobileMenu] = useState(false);
+  const [hidden, setHidden] = useState(false);
+  const { scrollY } = useScroll();
 
   useEffect(() => {
     window.addEventListener('resize', () => setMobileMenu(false));
-
-    if (mobileMenu) {
-      for (let i = 0; i < timelineContainer.length; i++) {
-        document.body.style.overflow = 'hidden';
-        timelineContainer[i].style['background'] = 'transparent';
-        timelineArrowTag[i].style['border-right-color'] = 'rgb(119, 124, 124)';
-        timelineYear[i].style['color'] = 'rgb(119, 124, 124)';
-        timelineTag[i].style['opacity'] = '0.7';
-        timelineImage[i].style['opacity'] = '0.3';
-      }
-    } else {
-      for (let i = 0; i < timelineContainer.length; i++) {
-        document.body.style.overflow = 'auto';
-        timelineContainer[i].style['background'] = '#fff';
-        timelineArrowTag[i].style['border-right-color'] = '#fff';
-        timelineYear[i].style['color'] = '#fff';
-        timelineTag[i].style['opacity'] = '1';
-        timelineImage[i].style['opacity'] = '1';
-      }
-    }
 
     return () => {
       removeEventListener('resize', () => setMobileMenu(false));
     };
   }, [mobileMenu]);
 
+  useMotionValueEvent(scrollY, 'change', (latest) => {
+    const previous = scrollY.getPrevious();
+    if (latest > previous && latest > 150) {
+      setHidden(true);
+      setMobileMenu(false);
+    } else {
+      setHidden(false);
+    }
+  });
+
   return (
-    <header className="navbar | bg-primary-100">
+    <motion.header
+      variants={{
+        visible: { y: 0 },
+        hidden: { y: '-100%' },
+      }}
+      animate={hidden ? 'hidden' : 'visible'}
+      transition={{ duration: 0.35, ease: 'easeInOut' }}
+      className="navbar | bg-primary-100 padding-block-300"
+    >
       <div className={mobileMenu ? 'navbar--mobile-shadow' : ''}>
         <div className="container">
           <div className="navbar--wrapper">
@@ -99,6 +84,6 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-    </header>
+    </motion.header>
   );
 }

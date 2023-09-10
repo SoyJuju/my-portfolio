@@ -3,16 +3,16 @@
 @use '../utility/breakpoints' as *;
 
 .navbar {
-  padding-top: getSize(500);
   background-color: getColor(primary, 100);
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 1;
 
   @media (max-width: $small-breakpoint) {
     &--mobile-shadow::before {
       content: '';
-      position: absolute;
+      position: fixed;
       inset: 0;
-      height: calc(100vh + getSize(800));
-      background-image: linear-gradient(rgb(0 0 0 / 0), rgb(0 0 0 / 0.8));
     }
   }
 
@@ -27,8 +27,8 @@
 
     @media (max-width: $small-breakpoint) {
       display: block;
-      position: absolute;
-      top: 1.9rem;
+      position: fixed;
+      top: 1.09375rem;
       right: 3.5vw;
       cursor: pointer;
       background: transparent;
@@ -49,12 +49,14 @@
       position: fixed;
       z-index: 1;
       padding: getSize(700);
-      inset: 7rem getSize(400) auto;
+      inset: 5rem getSize(400) auto;
       max-width: 35rem;
       margin-inline: auto;
-      background-color: getColor(neutral, 100);
+      background-color: getColor(accent, 100);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(15px);
       border-radius: getSize(100);
-      box-shadow: 0 0 0.75em rgb(0, 0, 0, 0.05);
+      box-shadow: 0 0 0.75em rgb(0, 0, 0, 0.25);
     }
   }
 

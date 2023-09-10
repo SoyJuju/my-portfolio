@@ -6,9 +6,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
-  min-height: calc(100vh - 17em);
-  margin-top: 3rem;
+  min-height: calc(100vh - 13.5rem);
+  padding-top: 6rem;
 
   &--intro {
     animation: slide-in-left 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
