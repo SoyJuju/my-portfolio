@@ -104,6 +104,7 @@
   --fs-200: 0.75rem;
   --fs-250: 0.82rem;
   --fs-300: 0.875rem;
+  --fs-350: 0.925rem;
   --fs-400: 1rem;
   --fs-450: 1.125rem;
   --fs-500: 1.25rem;
@@ -128,6 +129,10 @@
 
 .fs-small-300 {
   font-size: 0.875rem;
+}
+
+.fs-small-350 {
+  font-size: 0.925rem;
 }
 
 .fs-small-400 {
@@ -772,6 +777,12 @@ svg {
 .timeline--projects {
   padding-top: 6.3rem;
 }
+.timeline--info {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding-bottom: 1rem;
+}
 .timeline--heading {
   display: block;
   text-align: center;
@@ -783,12 +794,16 @@ svg {
 .timeline--description {
   font-weight: 400 !important;
 }
+.timeline--description a {
+  color: blue;
+  cursor: pointer;
+}
 .timeline--year {
   padding: 0.1rem 1rem;
-  font-size: 0.82rem !important;
+  font-size: 0.875rem !important;
 }
 .timeline--tag {
-  font-size: 0.875rem !important;
+  font-size: 0.925rem !important;
 }
 
 /* Overwrite Default Timeline Stylings */

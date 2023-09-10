@@ -30,7 +30,7 @@ export default function Timeline() {
                 >
                   {element.title}
                 </a>
-                <div className="projects--description">
+                <div className="timeline--info">
                   <p className="timeline--year | year-button fw-medium">
                     {element.date}
                   </p>
@@ -38,7 +38,10 @@ export default function Timeline() {
                     {element.tag}
                   </p>
                 </div>
-                <p className="timeline--description">{element.description}</p>
+                <div
+                  className="timeline--description"
+                  dangerouslySetInnerHTML={{ __html: element.description }}
+                ></div>
               </VerticalTimelineElement>
             );
           })}

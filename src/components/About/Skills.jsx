@@ -37,7 +37,7 @@ function SkillTag(SkillIcon, SkillLang, SkillLevel) {
         }}
         initial="hiddden"
         animate={mainControls}
-        transition={{ duration: 0.7 }}
+        transition={{ duration: 0.7, ease: 'easeInOut' }}
         trans
         className="skills--tag"
       >

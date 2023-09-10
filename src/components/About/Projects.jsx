@@ -27,8 +27,6 @@ function animateComponent(component, x_value) {
   useEffect(() => {
     console.log('isInView:', isInView);
     if (isInView) {
-      console.log('Animation started.');
-      console.log(variants.hidden);
       mainControls.start(variants.visible);
     }
   }, [isInView]);

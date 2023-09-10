@@ -10,6 +10,13 @@
     padding-top: 6.3rem;
   }
 
+  &--info {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding-bottom: 1rem;
+  }
+
   &--heading {
     display: block;
     text-align: center;
@@ -22,15 +29,19 @@
 
   &--description {
     font-weight: 400 !important;
+    a {
+      color: blue;
+      cursor: pointer;
+    }
   }
 
   &--year {
     padding: 0.1rem getSize(400);
-    font-size: getFontSize(small, 250) !important;
+    font-size: getFontSize(small, 300) !important;
   }
 
   &--tag {
-    font-size: getFontSize(small, 300) !important;
+    font-size: getFontSize(small, 350) !important;
   }
 }
 
