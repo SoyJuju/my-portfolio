@@ -524,6 +524,7 @@ svg {
   }
 }
 .navbar {
+  padding-top: 1.2rem;
   background-color: hsl(186, 100%, 98%);
   position: fixed;
   inset: 0 0 auto 0;
@@ -548,7 +549,7 @@ svg {
   .navbar--mobile-toggle {
     display: block;
     position: fixed;
-    top: 1.09375rem;
+    top: 1.5rem;
     right: 3.5vw;
     cursor: pointer;
     background: transparent;

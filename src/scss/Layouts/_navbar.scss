@@ -3,6 +3,7 @@
 @use '../utility/breakpoints' as *;
 
 .navbar {
+  padding-top: 1.2rem;
   background-color: getColor(primary, 100);
   position: fixed;
   inset: 0 0 auto 0;
@@ -28,7 +29,7 @@
     @media (max-width: $small-breakpoint) {
       display: block;
       position: fixed;
-      top: 1.09375rem;
+      top: 1.5rem;
       right: 3.5vw;
       cursor: pointer;
       background: transparent;
