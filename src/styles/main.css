@@ -6,6 +6,7 @@
   --clr-primary-500: hsl(234, 30%, 27%);
   --clr-secondary-400: hsl(215, 90%, 42%);
   --clr-accent-100: rgba(245, 254, 255, 0.4509803922);
+  --clr-accent-150: rgba(188, 186, 186, 0.308);
   --clr-accent-200: hsl(0, 100%, 80%);
   --clr-accent-400: hsl(0, 100%, 70%);
   --clr-neutral-100: #ffffff;
@@ -64,6 +65,10 @@
   color: rgba(245, 254, 255, 0.4509803922);
 }
 
+.text-accent-150 {
+  color: rgba(188, 186, 186, 0.308);
+}
+
 .text-accent-200 {
   color: hsl(0, 100%, 80%);
 }
@@ -74,6 +79,10 @@
 
 .bg-accent-100 {
   background-color: rgba(245, 254, 255, 0.4509803922);
+}
+
+.bg-accent-150 {
+  background-color: rgba(188, 186, 186, 0.308);
 }
 
 .bg-accent-200 {
@@ -529,6 +538,7 @@ svg {
   position: fixed;
   inset: 0 0 auto 0;
   z-index: 1;
+  border-bottom: 1px solid rgba(188, 186, 186, 0.308);
 }
 @media (max-width: 37em) {
   .navbar--mobile-shadow::before {
