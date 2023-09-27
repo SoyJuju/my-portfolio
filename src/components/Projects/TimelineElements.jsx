@@ -6,16 +6,6 @@ import CarShowroom from '../../assets/dad-showroom.png';
 let timelineElements = [
   {
     id: 1,
-    title: 'To Do List',
-    url: 'https://juju-to-do-list.netlify.app',
-    description:
-      'A to do list website I wrote with basic HTML, but SCSS instead of CSS and more complex Javascript.',
-    date: '2023',
-    tag: 'Utility',
-    image: ToDoListWebsite,
-  },
-  {
-    id: 2,
     title: 'Portfolio Website',
     url: 'https://julianhein.netlify.app',
     description:
@@ -25,7 +15,7 @@ let timelineElements = [
     image: MyPortfolioWebsite,
   },
   {
-    id: 3,
+    id: 2,
     title: 'Coffee Website',
     url: 'https://baristachawsu.netlify.app',
     description:
@@ -35,14 +25,24 @@ let timelineElements = [
     image: CoffeeWebsite,
   },
   {
-    id: 4,
+    id: 3,
     title: 'Car Showroom Website',
-    url: 'https://stylenation.netlify.app',
+    url: 'https:stylenation.netlify.app',
     description:
       "This is the website I made for my dad's business. He opens a car showroom so I made him a website for his showroom. The website shows the cars he sells and ways to contact him.",
     date: '2023',
     tag: 'Business',
     image: CarShowroom,
+  },
+  {
+    id: 4,
+    title: 'To Do List',
+    url: 'https://todolist-juju.netlify.app',
+    description:
+      'This is a todolist with advanced features such as login and signout. The user data is stored in a mongo db database and the items of the users are linked with the id of the user. This is made up of the MERN stack and the backend is hosted on Render. The basic version of the todolist can be found in <a href="https://juju-to-do-list.netlify.app" target="_blank">https://juju-to-do-list.netlify.app</a>.',
+    date: '2023',
+    tag: 'Utility',
+    image: ToDoListWebsite,
   },
 ];
 

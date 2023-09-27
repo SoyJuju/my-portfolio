@@ -1,6 +1,6 @@
 import '../../styles/main.css';
 
-import MyPortfolioWebsite from '../../assets/my-portfolio.png';
+import CarShowroom from '../../assets/dad-showroom.png';
 import CoffeeWebsite from '../../assets/coffee-website.png';
 import ToDoListWebsite from '../../assets/todolist-website.png';
 
@@ -76,16 +76,16 @@ export default function Projects() {
         <h2 className="fs-small-700 fw-medium">Featured Works</h2>
         <ul role="list" className="projects--container">
           {ProjectTag(
-            MyPortfolioWebsite,
-            '#',
+            CarShowroom,
+            'https:stylenation.netlify.app',
             'My Portfolio Website',
             '2023',
-            'Portfolio',
-            'This is the website you are currently viewing. My very first portfolio website that I built on my own. The idea is to be minimalstic and to look clean.'
+            'Business',
+            "This is the website I made for my dad's business. He opens a car showroom so I made him a website for his showroom. The website shows the cars he sells and ways to contact him."
           )}
           {ProjectTag(
             CoffeeWebsite,
-            'https://baristachawsu.great-site.net',
+            'https://baristachawsu.netlify.app',
             'Coffee Recipes Website',
             '2023',
             'Educational',
@@ -93,11 +93,11 @@ export default function Projects() {
           )}
           {ProjectTag(
             ToDoListWebsite,
-            'https://juju-to-do-list.netlify.app',
+            'https://todolist-juju.netlify.app',
             'To Do List',
             '2023',
             'Utility',
-            'This is a more advanced website I created after building a few static websites. This included more complex javascript but with a very simple UI. This project is not connected to a database because I built this to progress my javascript skills.'
+            'This is a todolist with advanced features such as login and signout. The user data is stored in a mongo db database and the items of the users are linked with the id of the user. This is made up of the MERN stack and the backend is hosted on Render.'
           )}
         </ul>
       </div>
