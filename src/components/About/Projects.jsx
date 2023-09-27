@@ -78,7 +78,7 @@ export default function Projects() {
           {ProjectTag(
             CarShowroom,
             'https:stylenation.netlify.app',
-            'My Portfolio Website',
+            'Car Showroom Website',
             '2023',
             'Business',
             "This is the website I made for my dad's business. He opens a car showroom so I made him a website for his showroom. The website shows the cars he sells and ways to contact him."
